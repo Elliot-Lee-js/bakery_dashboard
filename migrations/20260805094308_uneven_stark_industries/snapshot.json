@@ -1,0 +1,237 @@
+{
+  "version": "8",
+  "dialect": "postgres",
+  "id": "5fe4ad36-84f6-4f0b-981b-7315b9ed0f99",
+  "prevIds": [
+    "00000000-0000-0000-0000-000000000000"
+  ],
+  "ddl": [
+    {
+      "values": [
+        "ingredients",
+        "operations",
+        "staff",
+        "maintenance",
+        "miscellaneous"
+      ],
+      "name": "cost_category",
+      "entityType": "enums",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "cost_table",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "product_table",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "type": "serial",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "cost_table"
+    },
+    {
+      "type": "varchar(40)",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "name",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "cost_table"
+    },
+    {
+      "type": "cost_category",
+      "typeSchema": "public",
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "category",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "cost_table"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "description",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "cost_table"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "amount",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "cost_table"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "date",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "cost_table"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "created_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "cost_table"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "updated_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "cost_table"
+    },
+    {
+      "type": "serial",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "product_table"
+    },
+    {
+      "type": "varchar(40)",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "name",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "product_table"
+    },
+    {
+      "type": "numeric(10,2)",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "price",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "product_table"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "amount",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "product_table"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "created_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "product_table"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "updated_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "product_table"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "cost_table_pkey",
+      "schema": "public",
+      "table": "cost_table",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "product_table_pkey",
+      "schema": "public",
+      "table": "product_table",
+      "entityType": "pks"
+    }
+  ],
+  "renames": []
+}
